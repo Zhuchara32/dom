@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="open" onclick="openBox('window', 'open'); return false">Открыть</button>
+    <div id="window" class="window">
+        <p>Закрой меня</p>
+        <button id="close" onclick="openBox('window', 'close'); return false">Закрыть</button>
+    </div>
+    <script>
+        function openBox(id, doorman) {
+
+            if (doorman == 'open') {
+                document.getElementById(id).style.display = 'block';
+            }
+            else if (doorman == 'close') {
+                document.getElementById(id).style.display = 'none';
+            }
+            else {
+                console.log('промазал');
+            }
+        }
+    </script>
+</body>
+
+</html>
